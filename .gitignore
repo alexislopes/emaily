@@ -56,6 +56,8 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# configuration keys on the dev side
 dev.js
 
 # next.js build output
