@@ -11,7 +11,7 @@ require('./services/passport')
 // connection to mongoDB
 mongoose.connect(keys.mongoURI)
 
-// express app creation
+// express app creation function
 const app = express()
 
 // setting a middleware that reads json
