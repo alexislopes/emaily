@@ -20,9 +20,8 @@ passport.use(new GoogleStrategy({
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
     callbackURL:  '/auth/google/callback',
-    proxy: true
 }, async (accessToken, refreshToken, profile, done) => {
-    const existinUser = await User.findOne({googleId: profile.id})
+    const existingUser = await User.findOne({googleId: profile.id})
     
     if(existingUser){
         done(null, existingUser)
